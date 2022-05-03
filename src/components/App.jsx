@@ -10,10 +10,10 @@ function App() {
   }
 
   function addItem() {
-    setItems(prevItems => {
+    setItems((prevItems) => {
       return [...prevItems, inputText];
     });
-    setInputText("");
+    setInputText(""); //clears input text box after adding newItem
   }
 
   return (
@@ -29,7 +29,7 @@ function App() {
       </div>
       <div>
         <ul>
-          {items.map(todoItem => (
+          {items.map((todoItem) => (
             <li>{todoItem}</li>
           ))}
         </ul>
